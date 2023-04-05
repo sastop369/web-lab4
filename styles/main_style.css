@@ -1,0 +1,242 @@
+html body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    background-color:#2c292a;
+}
+footer{
+    background-color: #705b5b;
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+header{
+    background-image: url("../images/head.jpeg");
+    background-size:cover;
+    width: 100%;
+    height: auto;
+}
+header h1{
+    font-size: 50px;
+    color: #ffffff;
+    text-align: center;
+    width: auto;
+    margin-bottom: 15px;
+    margin: 0px;
+    margin-top:0px;
+    padding-top: 45px;
+    line-height: 1;
+}
+header h1 span{
+    color: #6f2230;
+}
+p{
+    padding-top: 0px;
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+
+header h2{
+    font-size: 15px;
+    margin: 0px;
+    text-align: center;
+    width: auto;
+    padding-bottom: 45px;
+    color: #ffffff;
+    opacity: .6;
+    font-weight: lighter;
+}
+.card-body{
+    padding-top: 0px !important;
+}
+header img{
+    width: 10%;
+    height: auto;
+}
+.navbar>.container-fluid{
+    margin: 0;
+}
+.navbar{
+    background-color: #7e1535;
+}
+a.nav-link{
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    background-color: #7e1535;
+    text-align: center;
+    line-height: 3;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 10px;
+}
+a.nav-link:hover{
+    background-color: #470620;
+    color: whitesmoke;
+}
+a.nav-link.disabled{
+    color: whitesmoke;
+}
+a.btn:hover{
+    background-color: #470620;
+    color: whitesmoke;
+}
+th.btn:hover{
+    background-color: #470620;
+    color: whitesmoke;
+}
+.container-fluid p,.container-fluid h5, p dd{
+    color: #e7e7e7;
+}
+.container-fluid p dd{
+    font-size: 20px;
+    color: #e7e7e7;
+}
+.card{
+    text-align:justify;
+}
+textarea{
+    border-radius: 7px;
+    width: 20%;
+}
+@media screen and (min-width: 800px)
+{
+    .card h5{
+        font-size: 19px;
+    }
+    .card p{
+        font-size: 16px;
+    }
+    p.time{
+        font-size: 14px;
+    }
+    img{
+        max-width: 100%;
+    }
+    iframe{
+        max-width: 100%;
+    }
+    input{
+        max-width: 70%;
+    }
+    textarea{
+        width: 20%;
+    }
+    a.nav-link{
+        font-size: 18px;
+    }
+    p{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 800px)
+{
+    .card h5{
+        font-size: 16px;
+    }
+    .card p{
+        font-size: 12px;
+    }
+    p.time{
+        font-size: 10px;
+    }
+    img{
+        max-width: 100%;
+    }
+    iframe{
+        max-width: 100%;
+    }
+    textarea{
+        width: 98%;
+    }
+    th{
+        font-size: 12px;
+    }
+    button.btn{
+        font-size: 12px;
+    }
+    a.nav-link{
+        font-size: 14px;
+    }
+    p{
+        font-size: 14px;
+    }
+}
+.card img{
+    max-width: 96%;
+    display:block;
+    border-radius: 10px;
+    margin:2%;
+}
+.card a{
+    margin-top: 10px;
+    vertical-align: top;
+    padding: 8px 8px;
+    border: 1px solid #412c32;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    background: #8a1e3e;
+    margin-top: 10px;
+}
+.card h5{
+    margin:0px;
+    margin-top: 12px;
+}
+.card p{
+    margin-bottom: 0px;
+}
+.contacts{
+    color: #e7e7e7ee;
+    font-size: 16px;
+}
+.contacts p{
+    margin-top: 10px;
+}
+.contacts img{
+    margin-top: 0px;
+}
+.contacts a:link {
+    color: #ca7988;
+}
+button.btn{
+    background-color: #7e1535;
+    color: #e7e7e7;
+    margin-top: 10px;
+}
+button.btn:hover{
+    background-color: #460d1e;
+    color: #e7e7e7;
+}
+a.btn{
+    background-color: #7e1535;
+    color: #e7e7e7;
+    margin: 10px;
+    border: 1px solid rgb(255, 255, 255, .3);
+}
+a.btn:hover{
+    background-color: #460d1e;
+    color: #e7e7e7;
+}
+thead{
+    color: #7e1535;
+    font-size: 20px;
+}
+
+input{
+    border-radius: 7px;
+    margin-bottom: 10px;
+    background-color: white;
+    border:0;
+}
+button{
+    border-radius: 7px;
+    background-color: #7e1535;
+    color: white;
+    border: 0;
+}
+button:hover{
+    background-color: #460d1e;
+}
+a.navbar-brand{
+    padding-left: 10px;
+}
