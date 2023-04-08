@@ -88,7 +88,7 @@ th.btn:hover{
     color: #e7e7e7;
 }
 .container-fluid p dd{
-    font-size: 20px;
+    font-size: 17px;
     color: #e7e7e7;
 }
 .card{
@@ -101,10 +101,10 @@ textarea{
 @media screen and (min-width: 800px)
 {
     .card h5{
-        font-size: 19px;
+        font-size: 16px;
     }
     .card p{
-        font-size: 16px;
+        font-size: 14px;
     }
     p.time{
         font-size: 14px;
@@ -122,10 +122,13 @@ textarea{
         width: 20%;
     }
     a.nav-link{
-        font-size: 18px;
+        font-size: 16px;
     }
     p{
-        font-size: 18px;
+        font-size: 14px;
+    }
+    button.btn{
+        font-size: 14px;
     }
 }
 @media screen and (max-width: 800px)
@@ -155,12 +158,16 @@ textarea{
         font-size: 12px;
     }
     a.nav-link{
-        font-size: 14px;
+        font-size: 16px;
     }
     p{
         font-size: 14px;
     }
+    h5.title{
+        font-size: 16px;
+    }
 }
+
 .card img{
     max-width: 96%;
     display:block;
@@ -207,6 +214,7 @@ button.btn:hover{
     background-color: #460d1e;
     color: #e7e7e7;
 }
+
 a.btn{
     background-color: #7e1535;
     color: #e7e7e7;
@@ -239,4 +247,46 @@ button:hover{
 }
 a.navbar-brand{
     padding-left: 10px;
+}
+
+img{
+    text-align: center;
+    max-width: 100%;
+}
+
+.last_news{
+    margin-bottom: 15px;
+    text-align: center;
+    background-color: rgb(62,42,45);
+}
+
+h7{
+    color: #e7e7e7;
+    font-size: 18px;
+}
+
+.slider .single-item img{
+    max-width: 100%;
+}
+
+.wrapper{
+    padding: 0;
+    margin: 20px auto;
+}
+
+.slider h8{
+    color: #e7e7e7;
+    left: 10px; right: 10px; bottom: 10px; position: absolute;
+}
+
+p{
+    position: relative; 
+}
+
+button.a{
+    padding: 0;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #e7e7e7 !important;
 }

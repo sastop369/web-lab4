@@ -18,13 +18,13 @@ iframe{
 }
 .container-fluid p{
     text-align:justify;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1.5;
     margin-bottom: 0px;
 }
 .container-fluid h2{
     color: #e7e7e7;
-    font-size: 22px;
+    font-size: 18px;
     text-align: center;
     margin-bottom: 25px;
 }

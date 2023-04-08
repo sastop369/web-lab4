@@ -14,8 +14,10 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles/main_style.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   </head>
   <body>
     <header>
@@ -69,31 +71,45 @@ session_start();
             }
             ?>
       </div> 
-  </nav>
+    </nav>
+
+
+    <?php 
+    $from=0;
+    $num=6;
+    include("load-data.php");
+    ?>
+
+    <div class="wrapper">
+        <div class="slider single-item">
+        <?php 
+        for ($i = 0;$i<$num;$i++) {
+        ?>
+            <div>
+                <center><p>
+                            <form method="get" action="new-page.php" enctype="multipart/form-data">
+                                <input type ='hidden' name='id' value=<?=$news[$i]["ID"]?>></input>
+                                <button class="a" type="submit" role="button"><img src="images/headers/<?=$news[$i]["HeadPicture"]?>"><h5 class="title"><?=$news[$i]["Head"]?></h5></button>
+                            </form>
+                </p></center>
+            </div>
+        <?php } ?>
+        </div>
+    </div>
+
+
+
+    <div class="last_news">
+        <h7>Свежие новости</h7>
+    </div>
+
+
 
     <?php 
     $from=0;
     $num=3;
     include("load-data.php");
     ?>
-
-    <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-md-3 g-3">
-        <?php 
-        for ($i = 0;$i<$num;$i++) {
-         ?>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="image-slider">
-                            <img src="images/headers/<?=$news[$i]["HeadPicture"]?>" class="img-top" alt="">
-                        </div>
-                    </div>
-                </div>
-            <?php } ?>
-            </div>
-        </div>
-    </div>
 
     <div class="container-fluid">
         <div class="row row-cols-1 row-cols-md-3 g-3">
@@ -118,7 +134,11 @@ session_start();
         </div>
     </div>
   <footer class ="sticky-bottom">&copy 2023 Лабораторные работы по дисциплине "Создание современных кроссплатформенных приложений на основе web-технологий"</footer>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  
+
+
+  <script src="slick/slick.min.js"></script>
+
   <script src="script.js"></script>
   </body>
 </html>
