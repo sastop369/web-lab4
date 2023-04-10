@@ -1,5 +1,7 @@
 <?php
 include("connect-to-table.php");
+session_start();
+include("header.php");
 if (trim($_FILES["head_image"]["name"]))
 {
     $stmt = $mysqli->prepare("SELECT HeadPicture FROM pages1 WHERE id = ?");
@@ -20,10 +22,7 @@ if (trim($_FILES["head_image"]["name"]))
     $id = $_POST['id'];
     $pic = $head_image_name;
     $stmt->execute();
-    if(move_uploaded_file($head_image_tmp, $head_folder))
-        echo "Успешно заменено изображение для заголовка<br>";
-    else
-        echo "Не получилось заменить изображение для заголовка<br>";
+    move_uploaded_file($head_image_tmp, $head_folder);
 }
 if (trim($_FILES["main_image"]["name"]))
 {
@@ -45,10 +44,7 @@ if (trim($_FILES["main_image"]["name"]))
     $id = $_POST['id'];
     $pic = $main_image_name;
     $stmt->execute();
-    if(move_uploaded_file($main_image_tmp, $main_folder))
-        echo "Успешно заменено изображение для статьи<br>";
-    else
-        echo "Не получилось заменить изображение для статьи<br>";
+    move_uploaded_file($main_image_tmp, $main_folder);
 }
 $stmt = $mysqli->prepare("UPDATE pages1 SET Head = ?, ShortText = ?, ArticleText = ?, NewDate = ? WHERE ID = ?");
 $stmt->bind_param("ssssi", $title, $short_text, $full_text, $new_date, $id);
@@ -58,13 +54,8 @@ $short_text = $_POST['short_text'];
 $full_text = $_POST['full_text'];
 $new_date = $_POST['new_date'];  
 $stmt->execute();
-if (trim($_POST['new_date']))
-{
-    $stmt = $mysqli->prepare("UPDATE pages1 SET NewDate = ? WHERE ID = ?");
-    $stmt->bind_param("si", $new_date, $id);
-    $id = $_POST['id'];
-    $new_date = $_POST['new_date'];  
-    $stmt->execute();
-}
-header("Location: "."./index.php");
+?>
+<p>Новость успешно изменена</p>
+<?php
+include("footer.php");
 ?>

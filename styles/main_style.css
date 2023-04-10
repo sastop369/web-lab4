@@ -33,6 +33,7 @@ p{
     padding-top: 0px;
     margin-bottom: 0px;
     font-size: 18px;
+    color: #ffffff;
 }
 
 header h2{
@@ -260,13 +261,16 @@ img{
     background-color: rgb(62,42,45);
 }
 
-h7{
-    color: #e7e7e7;
-    font-size: 18px;
+.slick-dots li.slick-active button:before {
+    color: #e7e7e7 !important;
 }
 
-.slider .single-item img{
-    max-width: 100%;
+.slick-dots{
+    margin-bottom: 15px !important;
+}
+
+.slick-slide{
+    height: inherit !important;
 }
 
 .wrapper{
@@ -279,14 +283,20 @@ h7{
     left: 10px; right: 10px; bottom: 10px; position: absolute;
 }
 
+h7{
+    color: #e7e7e7;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.slider .single-item img{
+    max-width: 100%;
+}
+
 p{
     position: relative; 
 }
 
 button.a{
     padding: 0;
-}
-
-.slick-dots li.slick-active button:before {
-    color: #e7e7e7 !important;
 }

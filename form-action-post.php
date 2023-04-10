@@ -1,5 +1,7 @@
 <?php
 include("connect-to-table.php");
+session_start();
+include("header.php");
 /* Подготовленный запрос, шаг 1: подготовка */
 $stmt = $mysqli->prepare("INSERT INTO pages1 (Head, ShortText, ArticleText, NewDate, HeadPicture, FullPicture) VALUES (?, ?, ?, ?, ?, ?)");
 /* Подготовленный запрос, шаг 2: связывание и выполнение */
@@ -15,19 +17,10 @@ $short_text = $_POST['short_text'];
 $full_text = $_POST['full_text'];
 $new_date = $_POST['new_date'];  
 $stmt->execute();
-if(move_uploaded_file($head_image_tmp, $head_folder))
-  echo "Успешно загружено изображение для заголовка<br>";
-else
-{
-  echo "Не получилось загрузить изображение для заголовка<br>";
-  exit;
-}
-if(move_uploaded_file($main_image_tmp, $main_folder))
-  echo "Успешно загружено изображение для статьи<br>";
-else
-{
-  echo "Не получилось загрузить изображение для статьи<br>";
-  exit;
-}
-header("Location: "."./index.php");
+move_uploaded_file($head_image_tmp, $head_folder);
+move_uploaded_file($main_image_tmp, $main_folder);
+?>
+<p>Новость загружена успешно</p>
+<?php
+include("footer.php");
 ?>
