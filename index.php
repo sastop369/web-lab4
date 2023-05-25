@@ -63,5 +63,3 @@ include("header.php");
     <script src="slick/slick.min.js"></script>
     <script src="script.js"></script>
 
-  </body>
-</html>

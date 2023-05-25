@@ -6,7 +6,7 @@ include("header.php");
                 <p>Имя пользователя</p>
                 <input type="text" name="user_name" required>
                 <p>Пароль</p>
-                <input type="text" name="password" required></input>
+                <input type="password" name="password" required></input>
                 <input type="submit" name="submit"></input>
             </form>
         </div>
