@@ -1,7 +1,7 @@
 <?php include("connect-to-table.php");
 session_start();
 include("header.php");
-include("load-by-id.php")
+include("lab4/load-by-id.php")
 ?>
     <link rel="stylesheet" href="styles/news_style.css">
     <div class="container-fluid">

@@ -1,4 +1,4 @@
-const deadline = new Date(2023, 04, 26);
+const deadline = new Date(2023, 04, 20);
 
 document.addEventListener('DOMContentLoaded', function() {
     // id таймера

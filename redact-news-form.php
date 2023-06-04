@@ -2,7 +2,7 @@
 session_start();
 include("header.php");
 ?>
-        <?php include("load-by-id.php") ?>
+        <?php include("lab4/load-by-id.php") ?>
         <div class="container-fluid">
         <form method="post" enctype="multipart/form-data">
             <br><h5>Отредактируйте желаемые поля</h5>
@@ -21,8 +21,8 @@ include("header.php");
             <input type="file" name="main_image" accept="image/png image/jpg"></input>
             <br>
             <br>
-            <input type="submit" name="submit" formaction="form-action-redact.php"></input>
-            <button name="delete" formaction="delete-new.php">Удалить</button>
+            <input type="submit" name="submit" formaction="lab4/form-action-redact.php"></input>
+            <button name="delete" formaction="lab4/delete-new.php">Удалить</button>
         </form>
         </div>
     <?php

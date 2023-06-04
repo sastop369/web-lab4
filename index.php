@@ -5,7 +5,7 @@ include("header.php");
     <?php 
     $from=0;
     $num=6;
-    include("load-data.php");
+    include("lab4/load-data.php");
     ?>
     <div class="wrapper">
         <div class="slider single-item">
