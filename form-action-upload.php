@@ -22,7 +22,6 @@ $author = $_POST['author'];
 $description = $_POST['description'];
 $date = $_POST['date'];  
 $stmt->execute();
-echo "ууууууууууу";
 move_uploaded_file($picture_tmp, $head_folder);
 ?>
 <p>Заявка успешно подана!</p>
