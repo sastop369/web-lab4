@@ -28,14 +28,14 @@
             <span class="navbar-toggler-icon"></span> 
             </button> 
 
-            <a class="navbar-brand" href="index.php"></a>   
+            <a class="navbar-brand" href="compitition.php"></a>   
             <div class="collapse navbar-collapse" id="navbarNav"> 
                 <ul class="navbar-nav ml-auto"> 
                     <li class="nav-item"> 
-                        <a class="nav-link scroll-link" href="index.php">Главная</a> 
+                        <a class="nav-link scroll-link" href="lab4/index.php">Главная</a> 
                     </li> 
                     <li class="nav-item"> 
-                        <a class="nav-link scroll-link" href="all-news.php">Все новости</a> 
+                        <a class="nav-link scroll-link" href="lab4/all-news.php">Все новости</a> 
                     </li> 
                     <li class="nav-item">
                       <a class="nav-link scroll-link" href="compitition.php">Фотоконкурс</a>
@@ -47,11 +47,11 @@
                       <a class="nav-link scroll-link" href="uploads.php">Заявки</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link scroll-link" href="redact-news.php">Редактировать новости</a>
+                      <a class="nav-link scroll-link" href="lab4/redact-news.php">Редактировать новости</a>
                     </li>
                     <?php } ?>
                     <li class="nav-item"> 
-                        <a class="nav-link scroll-link" href="contacts.php">Контакты</a> 
+                        <a class="nav-link scroll-link" href="lab4/contacts.php">Контакты</a> 
                     </li>
                 </ul> 
             </div>

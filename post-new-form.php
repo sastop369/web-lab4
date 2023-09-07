@@ -3,7 +3,7 @@ session_start();
 include("header.php");
 ?>
         <div class="container-fluid">
-            <form method="post" action="form-action-post.php" enctype="multipart/form-data">
+            <form method="post" action="lab4/form-action-post.php" enctype="multipart/form-data">
                 <p>Заголовок новости</p>
                 <input type="text" name="title" required>
                 <p>Короткий текст</p>

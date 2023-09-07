@@ -2,7 +2,7 @@
 session_start();
 include("header.php");
 ?>
-    <a class="btn" role="button" href="post-new-form.php" >Добавить новость</a>
+    <a class="btn" role="button" href="lab4/post-new-form.php" >Добавить новость</a>
     <table class="table table-secondary table-hover table-bordered border-dark">
         <thead>
         <tr>
@@ -17,7 +17,7 @@ $from = 0;
 $res = $mysqli->query("SELECT count(*) FROM pages1");
 $row = $res->fetch_row();
 $num = $row[0];
-include("load-data.php"); 
+include("lab4/load-data.php"); 
 foreach ($news as $oneNews)
 {
 ?>
@@ -25,7 +25,7 @@ foreach ($news as $oneNews)
             <th scope="col"><?=$oneNews["NewDate"]?></th>
             <th scope="col"><?=$oneNews["Head"]?></th>
             <th scope="col">
-                <form method="get" action="redact-news-form.php" enctype="multipart/form-data">
+                <form method="get" action="lab4/redact-news-form.php" enctype="multipart/form-data">
                     <input type ='hidden' name='id' value=<?=$oneNews["ID"]?>></input>
                     <center><button class="btn" type="submit" role="button">Редактировать</button></center>
                 </form>

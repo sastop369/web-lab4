@@ -12,7 +12,7 @@ include("header.php");
         $res = $mysqli->query("SELECT count(*) FROM pages1");
         $row = $res->fetch_row();
         $num = $row[0];
-        include("load-data.php"); 
+        include("lab4/load-data.php"); 
         foreach ($news as $oneNews) {
         ?>
         <div class="col">

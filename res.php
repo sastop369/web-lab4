@@ -15,14 +15,31 @@ include("header.php");
         $from = 0;
         $res = $mysqli->query("SELECT count(*) FROM compitition");
         $row = $res->fetch_row();
-        $num = 2;
+        $num = 3;
         include("load-winners.php"); 
         foreach ($uploads as $oneUpload) {
           if ($oneUpload["Accept"] == true) {
         ?>
         <div class="col">
           <div class="card h-100 text-white border-dark bg-danger" style="--bs-bg-opacity: .1;">
-            <img src="images/photos/<?=$oneUpload["Picture"]?>" class="img-top" alt="">
+          <?php if ($oneUpload["Picture2"] != '') { ?>
+              <div class="slider single-item">
+
+              <div>
+                  <center><p>
+                      <img src="images/photos/<?=$oneUpload["Picture"]?>" class="img-top">
+                  </p></center>
+              </div>
+              <div>
+                  <center><p>
+                      <img src="images/photos/<?=$oneUpload["Picture2"]?>" class="img-top">
+                  </p></center>
+              </div>
+
+              </div>
+          <?php } else { ?>  
+          <img src="images/photos/<?=$oneUpload["Picture"]?>" class="img-top" alt="">
+          <?php } ?>
             <div class="card-body">
               <h5 class="text-decoration-underline"><?=$oneUpload["Author"]?></h5>
               <p class="card-text" ><?=$oneUpload["DescriptionText"]?></p>
@@ -55,7 +72,7 @@ if (isset($_SESSION["Admin"])) { ?>
         Желаем Вам дальнейших успехов во всех Ваших начинаниях!</h5></center>
         <div class="wrapper">
         <div class="slider single-item">
-        <?php 
+        <?php
         for ($i = 0;$i<$num;$i++) {
         ?>
         <div>
